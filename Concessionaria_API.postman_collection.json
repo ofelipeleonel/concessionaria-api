@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "c1f78712-4f32-4411-9e6b-84a2d8cb5732",
+		"name": "Concessionária API - Prova P2",
+		"description": "Coleção de testes para a API REST de Concessionária (Tema Veículo)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Listar Veículos (GET /veiculo)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Buscar Veículo por ID (GET /veiculo/:id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/veiculo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"veiculo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Cadastrar Veículo (POST /veiculo)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modelo\": \"Hilux SRX 2.8 4x4\",\n    \"marca\": \"Toyota\",\n    \"preco\": 320000.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/veiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Atualizar Veículo (PUT /veiculo/:id)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modelo\": \"Civic Touring 1.5 Turbo\",\n    \"marca\": \"Honda\",\n    \"preco\": 135000.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/veiculo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"veiculo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Excluir Veículo (DELETE /veiculo/:id)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/veiculo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"veiculo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
